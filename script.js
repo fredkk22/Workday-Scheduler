@@ -22,10 +22,11 @@ var present = $(".present");
 var future = $(".future");
 var allInputs = [input1, input2, input3, input4, input5, input6, input7, input8, input9];
 var allHours = [hour1.text(), hour2.text(), hour3.text(), hour4.text(), hour5.text(), hour6.text(), hour7.text(), hour8.text(), hour9.text()];
+var everyInput = $(".allinputs");
 
 currentDay.text(moment().format("dddd, MMMM Do"))
 
-$(".allinputs").prop("disabled", false);
+everyInput.prop("disabled", false);
 
 function inputToggle1() {
     if (input1.prop("disabled")) {
@@ -122,16 +123,19 @@ $(".container").on("click", function (event) {
     }
 });
 
-
 for (var i = 0; i < allHours.length; i++) {
-    if (moment(allHours[i], "LT").format("HH") > moment().format("HH")) {
+    if (moment(allHours[i], "LT").format("HH") < moment().format("HH")) {
+        allInputs[i].removeClass("future");
         allInputs[i].removeClass("present");
-        allInputs[i].removeClass("past");
     } else if (moment(allHours[i], "LT").format("HH") === moment().format("HH")) {
         allInputs[i].removeClass("future");
         allInputs[i].removeClass("past");
-    } else if (moment(allHours[i], "LT").format("HH") < moment().format("HH")) {
-        allInputs[i].removeClass("future");
+    } else if (moment(allHours[i], "LT").format("HH") > moment().format("HH")) {
+        allInputs[i].removeClass("past");
         allInputs[i].removeClass("present");
+    }
+    
+    if (moment().format("HH") > 17) {
+        everyInput.addClass("future");
     }
 };
