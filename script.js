@@ -134,8 +134,8 @@ for (var i = 0; i < allHours.length; i++) {
         allInputs[i].removeClass("past");
         allInputs[i].removeClass("present");
     }
-    
-    if (moment().format("HH") > 17) {
+
+    if (moment().format("HH") > 17 || moment().format("HH") < 9) {
         everyInput.addClass("future");
     }
 };
