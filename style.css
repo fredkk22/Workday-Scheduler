@@ -1,3 +1,4 @@
+/* Element Selectors */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -8,6 +9,7 @@ footer {
   margin: 2rem;
 }
 
+/* Class Selectors */
 .jumbotron {
   text-align: center;
   background-color: skyblue;

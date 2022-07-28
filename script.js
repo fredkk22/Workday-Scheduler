@@ -24,47 +24,47 @@ $(".container").on("click", function (event) {
     event.preventDefault();
     var element = event.target;
 
-    if (element.matches(".disableinput1")) {
+    if (element.matches("#saveinput1")) {
         var sched1 = [];
         allInputs[0].val();
         sched1.push(allInputs[0].val());
         localStorage.setItem("9AM", JSON.stringify(sched1));
-    } else if (element.matches(".disableinput2")) {
+    } else if (element.matches("#saveinput2")) {
         var sched2 = [];
         allInputs[1].val();
         sched2.push(allInputs[1].val());
         localStorage.setItem("10AM", JSON.stringify(sched2));
-    } else if (element.matches(".disableinput3")) {
+    } else if (element.matches("#saveinput3")) {
         var sched3 = [];
         allInputs[2].val();
         sched3.push(allInputs[2].val());
         localStorage.setItem("11AM", JSON.stringify(sched3));
-    } else if (element.matches(".disableinput4")) {
+    } else if (element.matches("#saveinput4")) {
         var sched4 = [];
         allInputs[3].val();
         sched4.push(allInputs[3].val());
         localStorage.setItem("12PM", JSON.stringify(sched4));
-    } else if (element.matches(".disableinput5")) {
+    } else if (element.matches("#saveinput5")) {
         var sched5 = [];
         allInputs[4].val();
         sched5.push(allInputs[4].val());
         localStorage.setItem("1PM", JSON.stringify(sched5));
-    } else if (element.matches(".disableinput6")) {
+    } else if (element.matches("#saveinput6")) {
         var sched6 = [];
         allInputs[5].val();
         sched6.push(allInputs[5].val());
         localStorage.setItem("2PM", JSON.stringify(sched6));
-    } else if (element.matches(".disableinput7")) {
+    } else if (element.matches("#saveinput7")) {
         var sched7 = [];
         allInputs[6].val();
         sched7.push(allInputs[6].val());
         localStorage.setItem("3PM", JSON.stringify(sched7));
-    } else if (element.matches(".disableinput8")) {
+    } else if (element.matches("#saveinput8")) {
         var sched8 = [];
         allInputs[7].val();
         sched8.push(allInputs[7].val());
         localStorage.setItem("4PM", JSON.stringify(sched8));
-    } else if (element.matches(".disableinput9")) {
+    } else if (element.matches("#saveinput9")) {
         var sched9 = [];
         allInputs[8].val();
         sched9.push(allInputs[8].val());
@@ -115,6 +115,6 @@ function renderSched() {
     var storedSched9 = JSON.parse(localStorage.getItem("5PM"));
     allInputs[8].val(storedSched9);
 }
-
+// Render schedule when refreshing the page and keep all the time blocks colored
 renderSched();
 allHourBlocks();

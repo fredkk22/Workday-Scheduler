@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- All Style Links -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
@@ -14,19 +15,20 @@
 </head>
 
 <body>
+  <!-- Jumbotron Header -->
   <header class="jumbotron">
     <h1 class="display-3 mb-5">Work Day Scheduler</h1>
     <p class="lead m-5">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
   </header>
   <div class="container">
-    <!-- Timeblocks go here -->
+    <!-- All Time Blocks -->
     <div class="row time-block">
       <div class="input-group">
         <div class="hour hour1 col-2"></div>
         <input type="text" class="allinputs past present future col-8" id="input1" placeholder=""
           aria-label="9AM input event in Workday Scheduler" disabled="disabled">
-        <button class="input-group-prepend btn saveBtn disableinput1 col-1 fas fa-save" type="button"></button>
+        <button class="input-group-prepend btn saveBtn col-1 fas fa-save" id="saveinput1" type="button"></button>
       </div>
     </div>
 
@@ -35,7 +37,7 @@
         <div class="hour hour2 col-2"></div>
         <input type="text" class="allinputs past present future col-8" id="input2" placeholder=""
           aria-label="10AM input event in Workday Scheduler" disabled="disabled">
-        <button class="input-group-prepend btn saveBtn disableinput2 col-1 fas fa-save" type="button"></button>
+        <button class="input-group-prepend btn saveBtn col-1 fas fa-save" id="saveinput2" type="button"></button>
       </div>
     </div>
 
@@ -44,7 +46,7 @@
         <div class="hour hour3 col-2"></div>
         <input type="text" class="allinputs past present future col-8" id="input3" placeholder=""
           aria-label="11AM input event in Workday Scheduler" disabled="disabled">
-        <button class="input-group-prepend btn saveBtn disableinput3 col-1 fas fa-save" type="button"></button>
+        <button class="input-group-prepend btn saveBtn col-1 fas fa-save" id="saveinput3" type="button"></button>
       </div>
     </div>
 
@@ -53,7 +55,7 @@
         <div class="hour hour4 col-2"></div>
         <input type="text" class="allinputs past present future col-8" id="input4" placeholder=""
           aria-label="12PM input event in Workday Scheduler" disabled="disabled">
-        <button class="input-group-prepend btn saveBtn disableinput4 col-1 fas fa-save" type="button"></button>
+        <button class="input-group-prepend btn saveBtn col-1 fas fa-save" id="saveinput4" type="button"></button>
       </div>
     </div>
 
@@ -62,7 +64,7 @@
         <div class="hour hour5 col-2"></div>
         <input type="text" class="allinputs past present future col-8" id="input5" placeholder=""
           aria-label="1PM input event in Workday Scheduler" disabled="disabled">
-        <button class="input-group-prepend btn saveBtn disableinput5 col-1 fas fa-save" type="button"></button>
+        <button class="input-group-prepend btn saveBtn col-1 fas fa-save" id="saveinput5" type="button"></button>
       </div>
     </div>
 
@@ -71,7 +73,7 @@
         <div class="hour hour6 col-2"></div>
         <input type="text" class="allinputs past present future col-8" id="input6" placeholder=""
           aria-label="2PM input event in Workday Scheduler" disabled="disabled">
-        <button class="input-group-prepend btn saveBtn disableinput6 col-1 fas fa-save" type="button"></button>
+        <button class="input-group-prepend btn saveBtn col-1 fas fa-save" id="saveinput6" type="button"></button>
       </div>
     </div>
 
@@ -80,7 +82,7 @@
         <div class="hour hour7 col-2"></div>
         <input type="text" class="allinputs past present future col-8" id="input7" placeholder=""
           aria-label="3PM input event in Workday Scheduler" disabled="disabled">
-        <button class="input-group-prepend btn saveBtn disableinput7 col-1 fas fa-save" type="button"></button>
+        <button class="input-group-prepend btn saveBtn col-1 fas fa-save" id="saveinput7" type="button"></button>
       </div>
     </div>
 
@@ -89,7 +91,7 @@
         <div class="hour hour8 col-2"></div>
         <input type="text" class="allinputs past present future col-8" id="input8" placeholder=""
           aria-label="4PM input event in Workday Scheduler" disabled="disabled">
-        <button class="input-group-prepend btn saveBtn disableinput8 col-1 fas fa-save" type="button"></button>
+        <button class="input-group-prepend btn saveBtn col-1 fas fa-save" id="saveinput8" type="button"></button>
       </div>
     </div>
 
@@ -98,13 +100,13 @@
         <div class="hour hour9 col-2"></div>
         <input type="text" class="allinputs past present future col-8" id="input9" placeholder=""
           aria-label="5PM input event in Workday Scheduler" disabled="disabled">
-        <button class="input-group-prepend btn saveBtn disableinput9 col-1 fas fa-save" type="button"></button>
+        <button class="input-group-prepend btn saveBtn col-1 fas fa-save" id="saveinput9" type="button"></button>
       </div>
     </div>
   </div>
 
   <footer></footer>
-
+<!-- All Script Links -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./script.js"></script>
