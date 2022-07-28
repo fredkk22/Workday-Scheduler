@@ -23,30 +23,25 @@ var allTimes = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"
 currentDay.text(moment().format("dddd, MMMM Do"))
 
 // Initially enable all the time blocks
-everyInput.prop("disabled", false);
+everyInput.attr("disabled", false);
 
 // Function for coloring in an disabling blocks based on current time
 function allHourBlocks() {
-
     // For Loop
     for (var i = 0; i < allHours.length; i++) {
         if (moment(allHours[i], "LT").format("HH") < moment().format("HH")) {
-            allInputs[i].removeClass("future");
-            allInputs[i].removeClass("present");
-            allInputs[i].prop("disabled", true);
+            allInputs[i].addClass("past");
+            allInputs[i].attr("disabled", true);
         } else if (moment(allHours[i], "LT").format("HH") === moment().format("HH")) {
-            allInputs[i].removeClass("future");
-            allInputs[i].removeClass("past");
-            allInputs[i].prop("disabled", false);
+            allInputs[i].addClass("present");
+            allInputs[i].attr("disabled", false);
         } else if (moment(allHours[i], "LT").format("HH") > moment().format("HH")) {
-            allInputs[i].removeClass("past");
-            allInputs[i].removeClass("present");
-            allInputs[i].prop("disabled", false);
+            allInputs[i].addClass("future");
+            allInputs[i].attr("disabled", false);
         }
 
         if (moment().format("HH") > 17 || moment().format("HH") < 9) {
-            everyInput.addClass("future");
-            allInputs[i].prop("disabled", false);
+            currentDay.text("Good work today! Please go home.");
         }
     }
 };
