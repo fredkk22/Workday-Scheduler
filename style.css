@@ -38,7 +38,7 @@ footer {
   color: #000000;
   border: 1px dashed #000000;
   align-items: center;
-  border-radius:15px 0 0 15px;
+  border-radius: 15px 0 0 15px;
 }
 
 .past {
@@ -76,6 +76,7 @@ footer {
   margin: 0 auto;
   padding: 0;
 }
+
 .list-item-group {
   margin: 0 auto;
   padding: 0;

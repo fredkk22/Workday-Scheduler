@@ -73,26 +73,26 @@ $(".container").on("click", function (event) {
 });
 // Function for coloring in an disabling blocks based on current time
 function allHourBlocks() {
-for (var i = 0; i < allHours.length; i++) {
-    if (moment(allHours[i], "LT").format("HH") < moment().format("HH")) {
-        allInputs[i].removeClass("future");
-        allInputs[i].removeClass("present");
-        allInputs[i].prop("disabled", true);
-    } else if (moment(allHours[i], "LT").format("HH") === moment().format("HH")) {
-        allInputs[i].removeClass("future");
-        allInputs[i].removeClass("past");
-        allInputs[i].prop("disabled", false);
-    } else if (moment(allHours[i], "LT").format("HH") > moment().format("HH")) {
-        allInputs[i].removeClass("past");
-        allInputs[i].removeClass("present");
-        allInputs[i].prop("disabled", false);
-    }
+    for (var i = 0; i < allHours.length; i++) {
+        if (moment(allHours[i], "LT").format("HH") < moment().format("HH")) {
+            allInputs[i].removeClass("future");
+            allInputs[i].removeClass("present");
+            allInputs[i].prop("disabled", true);
+        } else if (moment(allHours[i], "LT").format("HH") === moment().format("HH")) {
+            allInputs[i].removeClass("future");
+            allInputs[i].removeClass("past");
+            allInputs[i].prop("disabled", false);
+        } else if (moment(allHours[i], "LT").format("HH") > moment().format("HH")) {
+            allInputs[i].removeClass("past");
+            allInputs[i].removeClass("present");
+            allInputs[i].prop("disabled", false);
+        }
 
-    if (moment().format("HH") > 17 || moment().format("HH") < 9) {
-        everyInput.addClass("future");
-        allInputs[i].prop("disabled", false);
+        if (moment().format("HH") > 17 || moment().format("HH") < 9) {
+            everyInput.addClass("future");
+            allInputs[i].prop("disabled", false);
+        }
     }
-}
 };
 // Function for storing and rendering the schedule
 function renderSched() {
