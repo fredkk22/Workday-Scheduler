@@ -20,6 +20,8 @@ I was able to learn everything I listed above and have become much more comforta
 
 [![Watch Video!](https://img.youtube.com/vi/xP8-WbizifY/maxresdefault.jpg)](https://youtu.be/xP8-WbizifY)
 
+(NOTE: VIDEO WAS RECORDED ROUGHLY AROUND !!PM, WHICH EXPLAINS ALL THE TIMEBLOCKS BEING GREEN)
+
 ## Credits
 
 ### Contributors
