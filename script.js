@@ -1,5 +1,6 @@
 // Declare Variables
 var currentDay = $("#currentDay");
+var currentTime = $("#currentTime");
 var hour1 = $(".hour1").text("9:00 AM");
 var hour2 = $(".hour2").text("10:00 AM");
 var hour3 = $(".hour3").text("11:00 AM");
@@ -21,6 +22,13 @@ var allTimes = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"
 
 // Display current date
 currentDay.text(moment().format("dddd, MMMM Do"))
+
+function showTime() {
+    let time = new Date();
+    currentTime.text("Current Time: " + time.toLocaleTimeString("en-US", { hour12: false }));
+    setTimeout(showTime, 1000);
+}
+showTime();
 
 // Initially enable all the time blocks
 everyInput.attr("disabled", false);
